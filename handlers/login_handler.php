@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
 
             if ($num == 1) {
                 $_SESSION['email'] = $email;
-                header("Location: index.php");
+                header("Location: AdminDashboard/dashboard.php");
             } else {
                 array_push($errors, "Email or password incorrect");
             }

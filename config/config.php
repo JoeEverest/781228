@@ -2,7 +2,7 @@
 $host = 'localhost';
 $loginUser = 'root';
 $loginPassword = '';
-$dbName = 'auth';
+$dbName = 'election';
 $connect = mysqli_connect($host, $loginUser, $loginPassword, $dbName);//Connection variable
 
 if(mysqli_connect_errno()) 

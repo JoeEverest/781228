@@ -1,10 +1,15 @@
+<?php
+include('../config/config.php');
+include('../session.php');
+include('../handlers/verification_check_handler.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8" />
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="../assets/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>
 		Dashboard
@@ -14,16 +19,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<!-- CSS Files -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link href="assets/demo/demo.css" rel="stylesheet" />
+	<link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="">
 	<div class="wrapper ">
 		<?php require("sidebar.php"); ?>
-    <div class="main-panel">
+		<div class="main-panel">
 			<!-- Navbar -->
 			<?php require("nav.php"); ?>
 			<!-- End Navbar -->
@@ -46,6 +51,13 @@
 									</div>
 								</div>
 							</div>
+							<!-- <div class="card-footer ">
+								<hr>
+								<div class="stats">
+									<i class="fa fa-refresh"></i>
+									Update Now
+								</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 col-sm-6">
@@ -99,7 +111,7 @@
 									<div class="col-5 col-md-4">
 									</div>
 									<div class="col-7 col-md-8">
-										<div class="numbers">									
+										<div class="numbers">
 											<p class="card-title">1,234,567<p>
 										</div>
 									</div>
@@ -118,7 +130,7 @@
 									<div class="col-5 col-md-4">
 									</div>
 									<div class="col-7 col-md-8">
-										<div class="numbers">									
+										<div class="numbers">
 											<p class="card-title">1,234,567<p>
 										</div>
 									</div>
@@ -137,7 +149,7 @@
 									<div class="col-5 col-md-4">
 									</div>
 									<div class="col-7 col-md-8">
-										<div class="numbers">									
+										<div class="numbers">
 											<p class="card-title">1,234,567<p>
 										</div>
 									</div>
@@ -156,7 +168,7 @@
 									<div class="col-5 col-md-4">
 									</div>
 									<div class="col-7 col-md-8">
-										<div class="numbers">									
+										<div class="numbers">
 											<p class="card-title">1,234,567<p>
 										</div>
 									</div>
@@ -166,36 +178,4 @@
 					</div>
 				</div>
 			</div>
-			<footer class="footer footer-black  footer-white ">
-				<div class="container-fluid">
-						<div class="credits ml-auto">
-							<span class="copyright">
-								<script>
-									document.write(new Date().getFullYear())
-								</script>
-							</span>
-						</div>
-				</div>
-			</footer>
-		</div>
-	</div>
-	<!--   Core JS Files   -->
-	<script src="assets/js/core/jquery.min.js"></script>
-	<script src="assets/js/core/popper.min.js"></script>
-	<script src="assets/js/core/bootstrap.min.js"></script>
-	<script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-	<!-- Chart JS -->
-	<script src="assets/js/plugins/chartjs.min.js"></script>
-	<!--  Notifications Plugin    -->
-	<script src="assets/js/plugins/bootstrap-notify.js"></script>
-	<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-	<script src="assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
-	<!-- <script src="assets/demo/demo.js"></script> -->
-	<script>
-		$(document).ready(function() {
-			demo.initChartsPages();
-		});
-	</script>
-</body>
-
-</html>
+			<?php require("footer.php"); ?>
